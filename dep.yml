@@ -16,7 +16,7 @@ spec:
       containers:
         - name: nginx
           image : nginx:alpine
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       type: frontend
