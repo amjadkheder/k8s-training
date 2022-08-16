@@ -13,3 +13,6 @@ spec:
         - name: nginx
           image :  nginx:alpine
   replicas: 3
+  selector:
+    matchLabels:
+      type: frontend
