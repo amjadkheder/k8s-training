@@ -17,8 +17,8 @@ spec:
         - command:
             - sleep
             - "3600"
-        - name: busybox
           image: busybox
+          name: pods-simple-container
   replicas: 3
   selector:
     matchLabels:
