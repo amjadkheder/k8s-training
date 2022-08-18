@@ -2,16 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: deployment
-  labels:
-    app: busyboxdeploy
-    kind: frontend
 spec:
   template:
     metadata:
       name: busybox-deploy
-      labels:
-        app:  busyboxdeploy
-        type: frontend
     spec:
       containers:
         - command:
@@ -20,6 +14,3 @@ spec:
         - name: busybox
           image : busybox
   replicas: 3
-  selector:
-    matchLabels:
-      type: frontend
