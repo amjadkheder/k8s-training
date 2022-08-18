@@ -2,15 +2,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: deployment
+  labels:
+    app: mydeployment
+    kind: frontend
 spec:
   template:
     metadata:
-      name: busybox-deploy
+      name: my-first-pod
+      labels:
+        app: myFirstPod
+        type: frontend
     spec:
       containers:
         - command:
             - sleep
-            - "3600"      
+            - "3600"
         - name: busybox
-          image : busybox
+          image: busybox
   replicas: 3
+  selector:
+    matchLabels:
+      type: frontend
