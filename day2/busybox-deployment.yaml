@@ -17,9 +17,9 @@ spec:
         - command:
             - sleep
             - "3600"
-          image: busybox
+          image: ubuntu
           name: pods-simple-container
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       type: frontend
